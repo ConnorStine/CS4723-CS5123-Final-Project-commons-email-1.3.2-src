@@ -31,12 +31,6 @@ public class EmailTest extends TestCase{
 		assertNotNull("The name should not be null.", testEmail.headers.get("name"));
 		assertEquals("value", testEmail.headers.get("name"));
 	}
-	//addReplyTo
-	@Test
-	public void testAddReplyTo() throws EmailException{
-		//Add a reply and check that it was added to the list correctly
-		testEmail.addReplyTo("a@b.com", "name");
-		assertEquals("a@b.com", testEmail.replyList.get(0).getAddress());
-	}
+
 
 }
